@@ -1,5 +1,5 @@
-const Homepage = () => {
-  return ( <>Quickcart</> );
-}
- 
+const Homepage = async () => {
+  return <>Quickcart</>;
+};
+
 export default Homepage;
