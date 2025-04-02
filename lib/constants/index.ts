@@ -19,3 +19,11 @@ export const signUpDefaultValues = {
   password: "",
   confirmPassword: "",
 };
+
+export const shippingAddressDefaultValues = {
+  fullName: "Chux M",
+  streetAddress: "123 New St",
+  city: "Newtown",
+  postalCode: "12345",
+  country: "Nigeria",
+};
