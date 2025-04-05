@@ -21,9 +21,9 @@ export const signUpDefaultValues = {
 };
 
 export const shippingAddressDefaultValues = {
-  fullName: "Chux M",
-  streetAddress: "123 New St",
-  city: "Newtown",
-  postalCode: "12345",
-  country: "Nigeria",
+  fullName: "",
+  streetAddress: "",
+  city: "",
+  postalCode: "",
+  country: "",
 };
