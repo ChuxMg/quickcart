@@ -26,7 +26,7 @@ export async function createOrder() {
       return {
         success: false,
         message: "Your cart is empty",
-        redirectTo: ".cart",
+        redirectTo: "/cart",
       };
     }
 
@@ -53,12 +53,12 @@ export async function createOrder() {
       shippingAddress: user.address,
       paymentMethod: user.paymentMethod,
       itemsPrice: cart.itemsPrice,
-      shippintPrice: cart.shippingPrice,
+      shippingPrice: cart.shippingPrice,
       taxPrice: cart.taxPrice,
       totalPrice: cart.totalPrice,
     });
 
-    // Create a transaction to create order and orderitems in database
+    // Create a transaction to create order and order items in database
     const insertedOrderId = await prisma.$transaction(async (tx) => {
       // Create order
 
