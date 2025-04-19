@@ -10,6 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { UserIcon } from "lucide-react";
+import Profile from '../../../app/user/profile/page';
 
 const UserButton = async () => {
     const session = await auth();
@@ -50,9 +51,27 @@ const UserButton = async () => {
               </div>
             </div>
           </DropdownMenuLabel>
+
+          <DropdownMenuItem>
+            <Link href="/user/profile" className="w-full">
+              User Profile
+            </Link>
+          </DropdownMenuItem>
+
+          <DropdownMenuItem>
+            <Link href="/user/orders" className="w-full">
+              Order History
+            </Link>
+          </DropdownMenuItem>
+
           <DropdownMenuItem className="p-0 mb-1">
-            <form action={ signOutUser } className="w-full">
-                <Button className="w-full py-4 px-2 h-4 justify-start" variant="ghost">Sign Out</Button>
+            <form action={signOutUser} className="w-full">
+              <Button
+                className="w-full py-4 px-2 h-4 justify-start"
+                variant="ghost"
+              >
+                Sign Out
+              </Button>
             </form>
           </DropdownMenuItem>
         </DropdownMenuContent>
