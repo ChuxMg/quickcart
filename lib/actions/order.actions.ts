@@ -401,7 +401,7 @@ export async function updateOrderToPaidCOD(orderId: string) {
 }
 
 // Update COD order to delivered
-export async function deliveredOrder(orderId: string) {
+export async function deliverOrder(orderId: string) {
   try {
     const order = await prisma.order.findFirst({
       where: { id: orderId },
