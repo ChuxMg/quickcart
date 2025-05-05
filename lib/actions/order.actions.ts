@@ -283,6 +283,7 @@ export async function getMyOrders({
   if (!session) throw new Error("User us not authorised");
 
   const data = await prisma.order.findMany({
+    // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
     where: { userId: session?.user?.id! },
     orderBy: { createdAt: "desc" },
     take: limit,
@@ -290,6 +291,7 @@ export async function getMyOrders({
   });
 
   const dataCount = await prisma.order.count({
+    // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
     where: { userId: session?.user?.id! },
   });
 
