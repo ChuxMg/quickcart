@@ -22,7 +22,7 @@ import { formatCurrency } from "@/lib/utils";
 
 const CartTable = ({ cart }: { cart?: Cart }) => {
   const router = useRouter();
-  const { toast } = useToast;
+  const { toast } = useToast();
   const [ispending, startTransition] = useTransition();
 
   return (
