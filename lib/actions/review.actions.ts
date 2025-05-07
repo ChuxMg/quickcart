@@ -101,7 +101,7 @@ export async function getReviews({ productId }: { productId: string }) {
 }
 
 // Get a review written by the current user
-export async function getReviwedByProductId({
+export async function getReviewByProductId({
   productId,
 }: {
   productId: string;
