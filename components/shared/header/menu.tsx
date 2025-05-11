@@ -10,8 +10,12 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import UserButton from "./user-button";
+import CartIndicator from "./cart-indicator";
+import { getMyCart } from "@/lib/actions/cart.actions";
 
-const Menu = () => {
+const Menu = async () => {
+  const cart = await getMyCart();
+
   return (
     <div className="flex justify-end gap-3">
       <nav className="hidden md:flex w-full max-w-xs gap-1">
@@ -20,6 +24,7 @@ const Menu = () => {
         <Button asChild variant="ghost">
           <Link href="/cart">
             <ShoppingCart /> Cart
+            <CartIndicator cart={cart} />
           </Link>
         </Button>
         <UserButton />
